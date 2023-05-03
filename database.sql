@@ -1,6 +1,4 @@
-drop database if exists webshop;
-create database webshop;
-use webshop;
+use opisk_c2sato00;
 create table category (
   id int primary key auto_increment,
   name varchar(50) not null
@@ -23,4 +21,4 @@ insert into category (name) values ('Kerailyesineet');
 insert into product (name, price, category_id) values ('PlayStation 5', 580, 1);
 insert into product (name, price, category_id) values ('METAL GEAR SOLID V', 25, 2);
 insert into product (name, price, category_id) values ('Afrikan tähti', 15, 3);
-insert into product (name, price, category_id) values ('joku figuuri emt', 40, 4);
+insert into product (name, price, category_id) values ('Minecraft muki', 10, 4);
