@@ -1,4 +1,6 @@
-use opisk_c2sato00;
+drop database if exists webshop;
+create database webshop;
+use webshop;
 create table category (
   id int primary key auto_increment,
   name varchar(50) not null
@@ -9,16 +11,18 @@ create table product (
   price double (10, 2) not null,
   image varchar(50),
   category_id int not null,
+  description varchar(255),
   index category_id(category_id),
   foreign key (category_id) references category(id) on delete restrict
 );
+
 
 insert into category (name) values ('Konsolit');
 insert into category (name) values ('Videopelit');
 insert into category (name) values ('Lautapelit');
 insert into category (name) values ('Kerailyesineet');
 
-insert into product (name, price, category_id) values ('PlayStation 5', 580, 1);
+insert into product (name, price, image, category_id, description) values ('PlayStation 5', 580, "ps5.png", 1, "Tämä on ps5.");
 insert into product (name, price, category_id) values ('Nintendo Switch', 300, 1);
 insert into product (name, price, category_id) values ('Xbox Series X', 520, 1);
 insert into product (name, price, category_id) values ('METAL GEAR SOLID V', 25, 2);
