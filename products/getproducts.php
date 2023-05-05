@@ -7,9 +7,14 @@ $parameters = explode('/',$uri);
 $category_id = $parameters[1];
 
 try {
+  // avataan tietokantayhteys
   $db = openDb();
+
+  // luodaan sql-käsky ja suoritetaan se
   $sql = "select * from category where id = $category_id";
   $query = $db->query($sql);
+
+  // haetaan tulokset ja tallenetaan ne $category-muuttujaan
   $category = $query->fetch(PDO::FETCH_ASSOC);
 
   $sql = "select * from product where category_id = $category_id";
