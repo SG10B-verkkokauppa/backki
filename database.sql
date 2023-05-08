@@ -27,7 +27,7 @@ create table order1 (
 insert into category (name) values ('Konsolit');
 insert into category (name) values ('Videopelit');
 insert into category (name) values ('Lautapelit');
-insert into category (name) values ('Kerailyesineet');
+insert into category (name) values ('Oheistuotteet');
 
 insert into product (name, price, image, category_id, description) values ('PlayStation 5', 580, "images/ps5.png", 1, "Tämä on ps5.");
 insert into product (name, price, image, category_id, description) values ('Nintendo Switch', 300, "images/switch.png", 1);
